@@ -1,0 +1,78 @@
+/* src/globals.css */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+
+header {
+  background-color: #ff5959;
+  color: white;
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* maybe change some transition effect  */
+
+.description-container,
+.button-container {
+  opacity: 0;
+  max-height: 0px;
+  margin-top: 0px;
+  transition: opacity 0.2s ease-in-out, max-height 0.35s ease-in-out,
+    margin-top 0.35s ease-in-out;
+}
+
+.card:hover .description-container,
+.card:hover .button-container {
+  opacity: 1;
+  max-height: 200px;
+  margin-top: 20px;
+}
+
+/* Details css */
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column grid */
+  gap: 80px; /* Default gap between all elements is 80px */
+}
+
+.back-link {
+  margin-bottom: 60px; /* Specifically set the gap between "Back" and "Hero" */
+}
+
+.detail-page {
+  padding-left: 123px;
+  padding-right: 121px;
+}
